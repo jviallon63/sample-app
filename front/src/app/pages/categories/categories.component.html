@@ -1,0 +1,7 @@
+<div class="page">
+  <div class="page-header">
+    <h2>Categories</h2>
+    <button mat-flat-button (click)="openCategoryForm()"><mat-icon>add</mat-icon>Add</button>
+  </div>
+  <app-data-table [columns]="columns" [fetcher]="fetcher" (edit)="openCategoryForm($event)" (remove)="remove($event)"></app-data-table>
+</div>

@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://drvmgbl2-inventorydb-pg01.postgres.database.azure.com:5432/drvmgbl2
+    driver-class-name: org.postgresql.Driver
+    username: rvm_dba
+    password: ${DB_PASSWORD}
+  jpa:
+    properties:
+      hibernate:
+        default_schema: toolbox
+        jdbc:
+          lob.non_contextual_creation: true
+  sql:
+    init:
+      data-locations: classpath:data-postgresql.sql

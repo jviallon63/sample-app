@@ -1,0 +1,35 @@
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette
+      ),
+      typography: (
+        plain-family: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        brand-family: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+      ),
+      density: 0
+    )
+  );
+}
+
+html.dark-mode {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette
+      )
+    )
+  );
+}
+
+:root {
+  --app-border: var(--mat-sys-outline-variant);
+  --app-surface: var(--mat-sys-surface);
+  --app-muted: var(--mat-sys-on-surface-variant);
+}

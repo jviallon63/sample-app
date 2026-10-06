@@ -1,0 +1,7 @@
+<div class="page">
+  <div class="page-header">
+    <h2>Products</h2>
+    <button mat-flat-button (click)="openProductForm()"><mat-icon>add</mat-icon>Add</button>
+  </div>
+  <app-data-table [columns]="columns" [fetcher]="fetcher" (edit)="openProductForm($event)" (remove)="remove($event)"></app-data-table>
+</div>

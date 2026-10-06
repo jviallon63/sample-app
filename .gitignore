@@ -1,0 +1,21 @@
+.idea/
+.vscode/
+target/
+*.class
+*.log
+*.iml
+.DS_Store
+
+# compiled output
+/dist
+/front/dist
+/build
+/tmp
+/out-tsc
+/front/.angular/*
+
+
+# dependencies
+/front/node_modules
+# local SQLite database (back, local profile)
+/back/*.db

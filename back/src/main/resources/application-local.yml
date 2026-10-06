@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:./local.db
+    driver-class-name: org.sqlite.JDBC
+    # SQLite allows a single writer: keep one connection to avoid "database is locked"
+    hikari:
+      maximum-pool-size: 1
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+  sql:
+    init:
+      data-locations: classpath:data-sqlite.sql
+      schema-locations: classpath:ddl-sqlite.sql

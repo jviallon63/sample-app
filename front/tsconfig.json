@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "es2020",
+    "strict": true,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "lib": ["es2018", "dom"],
+    "paths": {},
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "strictInjectionParameters": true,
+    "strictInputTypes": true,
+    "strictTemplates": true
+  }
+}

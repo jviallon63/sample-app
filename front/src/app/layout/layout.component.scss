@@ -1,0 +1,55 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.toolbar {
+  flex: none;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.brand {
+  margin-left: 8px;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.container {
+  flex: 1;
+}
+
+.sidenav {
+  width: 220px;
+  border-right: 1px solid var(--app-border);
+}
+
+.active {
+  background: var(--mat-sys-secondary-container);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  color: var(--app-muted);
+  border-top: 1px solid var(--app-border);
+}
+
+.version {
+  font-size: 11px;
+}

@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>{{ editMode ? 'Edit product' : 'Add new product' }}</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" class="dialog-form" (ngSubmit)="saveProduct()">
+    <mat-form-field>
+      <mat-label>Product Name</mat-label>
+      <input matInput formControlName="productName" required />
+      @if (form.get('productName')?.hasError('required') && form.get('productName')?.touched) {
+        <mat-error>Name is required</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="productDescription" rows="3"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput type="number" formControlName="productPrice" min="0" required />
+      @if (form.get('productPrice')?.hasError('required') && form.get('productPrice')?.touched) {
+        <mat-error>Price is required</mat-error>
+      }
+      @if (form.get('productPrice')?.hasError('min')) {
+        <mat-error>Price must be 0 or greater</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Stock</mat-label>
+      <input matInput type="number" formControlName="productStock" min="0" required />
+      @if (form.get('productStock')?.hasError('required') && form.get('productStock')?.touched) {
+        <mat-error>Stock is required</mat-error>
+      }
+      @if (form.get('productStock')?.hasError('min')) {
+        <mat-error>Stock must be 0 or greater</mat-error>
+      }
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button [disabled]="form.invalid || saving" (click)="saveProduct()">
+    <mat-icon>save</mat-icon>
+    Save
+  </button>
+</mat-dialog-actions>
