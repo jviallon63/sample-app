@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:sqlite:./data/local.db
+    url: jdbc:sqlite:/data/local.db
     driver-class-name: org.sqlite.JDBC
     # SQLite allows a single writer: keep one connection to avoid "database is locked"
     hikari:
